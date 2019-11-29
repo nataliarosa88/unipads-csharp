@@ -70,14 +70,14 @@ namespace SistemasImobiliaria.Dao
             return alterou;
         }
 
-        public bool delete(int codigo)
+        public bool delete(Imoveis imoveis)
         {
             bool excluiu = false;
             try
             {
                 String sql = "delete from imoveis where i_imoveis = @codigo";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = codigo;
+                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Integer).Value = imoveis.i_imoveis;
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
                 {

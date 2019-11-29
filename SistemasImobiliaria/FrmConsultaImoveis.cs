@@ -49,8 +49,18 @@ namespace SistemasImobiliaria
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int codigoImovel = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            bool excluido = imoveisCtr.setExcluiImoveis(conexao, codigoImovel);
+            int imovelID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            String endereco = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            String cidade = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            String estado = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+            Imoveis imoveis = new Imoveis();
+            imoveis.i_imoveis = imovelID;
+            imoveis.estado = estado;
+            imoveis.cidade = cidade;
+            imoveis.endereco = endereco;
+
+            bool excluido = imoveisCtr.setExcluiImoveis(conexao, imoveis);
             if (excluido)
             {
                 MessageBox.Show("Imóvel excluído com sucesso!");

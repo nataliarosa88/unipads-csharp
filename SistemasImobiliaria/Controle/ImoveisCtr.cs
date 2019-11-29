@@ -35,9 +35,9 @@ namespace SistemasImobiliaria.Controle
             return imoveisDao.retrieveByField(campo, tipo, descricao);
         }
 
-        public bool setExcluiImoveis(NpgsqlConnection conexao, int codigo)
+        public bool setExcluiImoveis(NpgsqlConnection conexao, Imoveis imoveis)
         {
-            return imoveisDao.delete(codigo);
+            return imoveisDao.delete(imoveis);
         }
 
         public bool setAlteraImoveis(NpgsqlConnection conexao, Imoveis imoveis)
