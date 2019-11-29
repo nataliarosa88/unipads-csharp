@@ -30,7 +30,7 @@ namespace SistemasImobiliaria.Controle
             return imoveisDao.retrieveAll();
         }
 
-        public DataTable getConsultaImoveis(NpgsqlConnection conexao, int campo, int tipo, String descricao)
+        public List<Imoveis> getConsultaImoveis(NpgsqlConnection conexao, int campo, int tipo, String descricao)
         {
             return imoveisDao.retrieveByField(campo, tipo, descricao);
         }
