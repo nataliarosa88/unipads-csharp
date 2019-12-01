@@ -30,17 +30,17 @@ namespace SistemasImobiliaria.Controle
             return imoveisDao.retrieveAll();
         }
 
-        public List<Imoveis> getConsultaImoveis(NpgsqlConnection conexao, int campo, int tipo, String descricao)
+        public List<Imoveis> getConsultaImoveis(int campo, int tipo, String descricao)
         {
             return imoveisDao.retrieveByField(campo, tipo, descricao);
         }
 
-        public bool setExcluiImoveis(NpgsqlConnection conexao, Imoveis imoveis)
+        public bool setExcluiImoveis(Imoveis imoveis)
         {
             return imoveisDao.delete(imoveis);
         }
 
-        public bool setAlteraImoveis(NpgsqlConnection conexao, Imoveis imoveis)
+        public bool setAlteraImoveis(Imoveis imoveis)
         {
             return imoveisDao.update(imoveis);
         }

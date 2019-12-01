@@ -32,7 +32,7 @@ namespace SistemasImobiliaria
         {
             if (textBoxDescricao.Text.Length > 0)
             {
-                dataGridView1.DataSource = imoveisCtr.getConsultaImoveis(conexao, comboBoxCampo.SelectedIndex, comboBoxTipo.SelectedIndex, textBoxDescricao.Text);
+                dataGridView1.DataSource = imoveisCtr.getConsultaImoveis(comboBoxCampo.SelectedIndex, comboBoxTipo.SelectedIndex, textBoxDescricao.Text);
             }
             else
             {
@@ -60,7 +60,7 @@ namespace SistemasImobiliaria
             imoveis.cidade = cidade;
             imoveis.endereco = endereco;
 
-            bool excluido = imoveisCtr.setExcluiImoveis(conexao, imoveis);
+            bool excluido = imoveisCtr.setExcluiImoveis(imoveis);
             if (excluido)
             {
                 MessageBox.Show("Imóvel excluído com sucesso!");
@@ -85,7 +85,7 @@ namespace SistemasImobiliaria
             imoveis.cidade = cidade;
             imoveis.estado = estado;
 
-            bool alterou = imoveisCtr.setAlteraImoveis(conexao, imoveis);
+            bool alterou = imoveisCtr.setAlteraImoveis(imoveis);
             if (alterou)
             {
                 MessageBox.Show("Imóvel alterado com sucesso!");
