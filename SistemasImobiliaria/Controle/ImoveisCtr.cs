@@ -1,4 +1,3 @@
-﻿using Npgsql;
 using SistemasImobiliaria.Dao;
 using SistemasImobiliaria.Modelo;
 using System;
@@ -14,11 +13,6 @@ namespace SistemasImobiliaria.Controle
     class ImoveisCtr
     {
         ImoveisDao imoveisDao;
-
-        public ImoveisCtr(NpgsqlConnection conexao)
-        {
-            imoveisDao = new ImoveisDao(conexao);
-        }
 
         public bool setIncluiImoveis(Imoveis imoveis)
         {
