@@ -14,11 +14,6 @@ namespace SistemasImobiliaria.Dao
     {
         private NpgsqlConnection conexao;
 
-        public ImoveisDao(NpgsqlConnection conexao)
-        {
-            this.conexao = conexao;
-        }
-
         public bool create(Imoveis imoveis)
         {
             bool incluiu = false;
