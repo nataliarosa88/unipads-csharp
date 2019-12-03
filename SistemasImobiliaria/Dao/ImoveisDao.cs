@@ -12,7 +12,8 @@ namespace SistemasImobiliaria.Dao
 {
     class ImoveisDao
     {
-        private NpgsqlConnection conexao;
+       
+        private NpgsqlConnection conexao = Conexao.getConexao();
 
         public bool create(Imoveis imoveis)
         {
