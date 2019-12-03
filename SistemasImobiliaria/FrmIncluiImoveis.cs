@@ -19,7 +19,6 @@ namespace SistemasImobiliaria
 
         public FrmIncluiImoveis()
         {
-            this.conexao = conexao;
             imoveisCtr = new ImoveisCtr();
             InitializeComponent();
         }
