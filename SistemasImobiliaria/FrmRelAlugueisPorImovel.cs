@@ -15,9 +15,9 @@ namespace SistemasImobiliaria
     public partial class FrmRelAlugueisPorImovel : Form
     {
         internal NpgsqlConnection conexao = null;
-        public FrmRelAlugueisPorImovel(NpgsqlConnection conexao)
+        public FrmRelAlugueisPorImovel()
         {
-            this.conexao = conexao;
+            
             InitializeComponent();
         }
 

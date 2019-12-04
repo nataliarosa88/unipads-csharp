@@ -14,13 +14,12 @@ namespace SistemasImobiliaria
 {
     public partial class FrmRelacaoDeImoveis : Form
     {
-        internal NpgsqlConnection conexao = null;
+
         ImoveisCtr imoveisCtr;
 
-        public FrmRelacaoDeImoveis(NpgsqlConnection conexao)
+        public FrmRelacaoDeImoveis()
         {
-            this.conexao = conexao;
-            imoveisCtr = new ImoveisCtr(conexao);
+            imoveisCtr = new ImoveisCtr();
             InitializeComponent();
         }
 

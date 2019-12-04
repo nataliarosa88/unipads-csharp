@@ -1,5 +1,4 @@
-﻿using Npgsql;
-using SistemasImobiliaria.Controle;
+﻿using SistemasImobiliaria.Controle;
 using SistemasImobiliaria.Modelo;
 using System;
 using System.Collections.Generic;
@@ -15,16 +14,14 @@ namespace SistemasImobiliaria
 {
     public partial class FrmConsultaImoveis : Form
     {
-        internal NpgsqlConnection conexao = null;
         ImoveisCtr imoveisCtr;
 
-        public FrmConsultaImoveis(NpgsqlConnection conexao)
+        public FrmConsultaImoveis()
         {
             InitializeComponent();
             comboBoxCampo.SelectedIndex = 0;
             comboBoxTipo.SelectedIndex = 0;
-            this.conexao = conexao;
-            imoveisCtr = new ImoveisCtr(conexao);
+            imoveisCtr = new ImoveisCtr();
             atualizaTela();
         }
 
@@ -42,7 +39,7 @@ namespace SistemasImobiliaria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmIncluiImoveis form = new FrmIncluiImoveis(conexao);
+            FrmIncluiImoveis form = new FrmIncluiImoveis();
             form.ShowDialog();
             atualizaTela();
         }
@@ -115,13 +112,13 @@ namespace SistemasImobiliaria
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmRelacaoDeImoveis form = new FrmRelacaoDeImoveis(conexao);
+            FrmRelacaoDeImoveis form = new FrmRelacaoDeImoveis();
             form.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FrmRelAlugueisPorImovel form = new FrmRelAlugueisPorImovel(conexao);
+            FrmRelAlugueisPorImovel form = new FrmRelAlugueisPorImovel();
             form.Show();
         }
     }

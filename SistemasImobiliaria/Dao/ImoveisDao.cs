@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ConFin.modelo;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 using SistemasImobiliaria.Modelo;
 using System.Windows.Forms;
 using System.Data;

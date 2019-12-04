@@ -12,7 +12,7 @@ namespace SistemasImobiliaria.Controle
 {
     class ImoveisCtr
     {
-        ImoveisDao imoveisDao;
+        ImoveisDao imoveisDao = new ImoveisDao();
 
         public bool setIncluiImoveis(Imoveis imoveis)
         {

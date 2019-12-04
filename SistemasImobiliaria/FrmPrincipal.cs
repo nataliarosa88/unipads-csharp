@@ -36,7 +36,7 @@ namespace SistemasImobiliaria
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmConsultaImoveis form = new FrmConsultaImoveis(conexao);
+            FrmConsultaImoveis form = new FrmConsultaImoveis();
             form.Show();
         }
 

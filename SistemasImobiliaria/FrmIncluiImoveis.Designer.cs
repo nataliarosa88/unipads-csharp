@@ -45,24 +45,27 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(31, 24);
+            this.label1.Location = new System.Drawing.Point(46, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(28, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
             // tbImovel
             // 
-            this.tbImovel.Location = new System.Drawing.Point(34, 40);
+            this.tbImovel.Location = new System.Drawing.Point(51, 62);
+            this.tbImovel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbImovel.Name = "tbImovel";
-            this.tbImovel.Size = new System.Drawing.Size(36, 20);
+            this.tbImovel.Size = new System.Drawing.Size(52, 26);
             this.tbImovel.TabIndex = 1;
             // 
             // tbCidade
             // 
-            this.tbCidade.Location = new System.Drawing.Point(132, 40);
+            this.tbCidade.Location = new System.Drawing.Point(198, 62);
+            this.tbCidade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCidade.Name = "tbCidade";
-            this.tbCidade.Size = new System.Drawing.Size(122, 20);
+            this.tbCidade.Size = new System.Drawing.Size(181, 26);
             this.tbCidade.TabIndex = 3;
             // 
             // label2
@@ -70,35 +73,39 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(129, 24);
+            this.label2.Location = new System.Drawing.Point(194, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cidade";
             // 
             // tbEstado
             // 
-            this.tbEstado.Location = new System.Drawing.Point(80, 40);
+            this.tbEstado.Location = new System.Drawing.Point(120, 62);
+            this.tbEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbEstado.Name = "tbEstado";
-            this.tbEstado.Size = new System.Drawing.Size(43, 20);
-            this.tbEstado.TabIndex = 5;
+            this.tbEstado.Size = new System.Drawing.Size(62, 26);
+            this.tbEstado.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(77, 24);
+            this.label3.Location = new System.Drawing.Point(116, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Estado";
             // 
             // tbEndereco
             // 
-            this.tbEndereco.Location = new System.Drawing.Point(34, 90);
+            this.tbEndereco.Location = new System.Drawing.Point(51, 138);
+            this.tbEndereco.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbEndereco.Name = "tbEndereco";
-            this.tbEndereco.Size = new System.Drawing.Size(220, 20);
+            this.tbEndereco.Size = new System.Drawing.Size(328, 26);
             this.tbEndereco.TabIndex = 7;
             // 
             // label4
@@ -106,18 +113,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(31, 74);
+            this.label4.Location = new System.Drawing.Point(46, 114);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Endereço";
             // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(157, 132);
+            this.button2.Location = new System.Drawing.Point(236, 203);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 36);
+            this.button2.Size = new System.Drawing.Size(102, 55);
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -126,9 +135,10 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(64, 132);
+            this.button1.Location = new System.Drawing.Point(96, 203);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 36);
+            this.button1.Size = new System.Drawing.Size(102, 55);
             this.button1.TabIndex = 8;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,10 +146,10 @@
             // 
             // FrmIncluiImoveis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(293, 189);
+            this.ClientSize = new System.Drawing.Size(440, 291);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbEndereco);
@@ -151,6 +161,7 @@
             this.Controls.Add(this.tbImovel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmIncluiImoveis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Incluir Imóveis";
