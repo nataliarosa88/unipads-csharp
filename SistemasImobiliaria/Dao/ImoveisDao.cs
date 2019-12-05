@@ -165,9 +165,10 @@ namespace SistemasImobiliaria.Dao
             return convertedList;
         }
 
-        public DataTable retrieveAll()
+        public List<Imoveis> retrieveAll()
         {
             DataTable dt = new DataTable();
+            List<Imoveis> convertedList = new List<Imoveis>();
             try
             {
                 NpgsqlCommand cmd = new NpgsqlCommand();
@@ -175,6 +176,14 @@ namespace SistemasImobiliaria.Dao
                 cmd.CommandText = "select * from imoveis";
                 NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
                 dat.Fill(dt);
+                convertedList = (from imovel in dt.AsEnumerable()
+                                 select new Imoveis()
+                                 {
+                                     i_imoveis = Convert.ToInt32(imovel["i_imoveis"]),
+                                     endereco = Convert.ToString(imovel["endereco"]),
+                                     cidade = Convert.ToString(imovel["cidade"]),
+                                     estado = Convert.ToString(imovel["estado"])
+                                 }).ToList();
             }
             catch (NpgsqlException erro)
             {
@@ -182,7 +191,7 @@ namespace SistemasImobiliaria.Dao
                 Console.WriteLine("Erro de SQL:" + erro.Message);
             }
 
-            return dt;
+            return convertedList;
         }
     }
 }

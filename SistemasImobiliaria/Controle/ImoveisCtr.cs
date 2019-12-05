@@ -20,7 +20,7 @@ namespace SistemasImobiliaria.Controle
             return imoveisDao.create(imoveis);   
         }
         
-        public DataTable getConsultaImoveis()
+        public List<Imoveis> getConsultaImoveis()
         {
             return imoveisDao.retrieveAll();
         }
