@@ -15,6 +15,8 @@ namespace SistemasImobiliaria.Dao
     {
        
         private NpgsqlConnection conexao = Conexao.getConexao();
+        private Filtro filtro = new Filtro();
+        
 
         public bool create(Imoveis imoveis)
         {
@@ -89,7 +91,7 @@ namespace SistemasImobiliaria.Dao
             return excluiu;
         }
 
-        public List<Imoveis> retrieveByField(int campo, int tipo, string descricao)
+        public List<Imoveis> retrieveByField(Filtro filtro)
         {
             DataTable dt = new DataTable();
             List<Imoveis> convertedList = new List<Imoveis>();
@@ -97,7 +99,7 @@ namespace SistemasImobiliaria.Dao
             {
                 String sql = "SELECT * FROM imoveis";
                 String nomeCampoOrdenacao = "i_imoveis";
-                switch (campo)
+                switch (filtro.campo)
                 {
                     case 0:
                         sql += " where cast (i_imoveis as varchar(20)) ";
@@ -116,25 +118,25 @@ namespace SistemasImobiliaria.Dao
                         nomeCampoOrdenacao = "estado";
                         break;
                 }
-                switch (tipo)
+                switch (filtro.tipo)
                 {
                     case 0:
-                        sql += " like '%" + descricao + "%'";
+                        sql += " like '%" + filtro.descricao + "%'";
                         break;
                     case 1:
-                        sql += " like '" + descricao + "%'";
+                        sql += " like '" + filtro.descricao + "%'";
                         break;
                     case 2:
-                        sql += " like '%" + descricao + "'";
+                        sql += " like '%" + filtro.descricao + "'";
                         break;
                     case 3:
-                        sql += " = '" + descricao + "'";
+                        sql += " = '" + filtro.descricao + "'";
                         break;
                     case 4:
-                        sql += " >= '" + descricao + "'";
+                        sql += " >= '" + filtro.descricao + "'";
                         break;
                     default:
-                        sql += " <= '" + descricao + "'";
+                        sql += " <= '" + filtro.descricao + "'";
                         break;
                 }
                 sql += " order by " + nomeCampoOrdenacao;

@@ -183,6 +183,7 @@
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Modelo\Alugueis.cs" />
+    <Compile Include="Modelo\Filtro.cs" />
     <Compile Include="Modelo\Imoveis.cs" />
     <Compile Include="Modelo\Pagamentos.cs" />
     <Compile Include="Modelo\Pessoas.cs" />

@@ -13,6 +13,7 @@ namespace SistemasImobiliaria.Controle
     class ImoveisCtr
     {
         ImoveisDao imoveisDao = new ImoveisDao();
+        Filtro filtro = new Filtro();
 
         public bool setIncluiImoveis(Imoveis imoveis)
         {
@@ -24,9 +25,9 @@ namespace SistemasImobiliaria.Controle
             return imoveisDao.retrieveAll();
         }
 
-        public List<Imoveis> getConsultaImoveis(int campo, int tipo, String descricao)
+        public List<Imoveis> getConsultaImoveis(Filtro filtro)
         {
-            return imoveisDao.retrieveByField(campo, tipo, descricao);
+            return imoveisDao.retrieveByField(filtro);
         }
 
         public bool setExcluiImoveis(Imoveis imoveis)

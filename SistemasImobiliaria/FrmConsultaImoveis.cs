@@ -15,6 +15,7 @@ namespace SistemasImobiliaria
     public partial class FrmConsultaImoveis : Form
     {
         ImoveisCtr imoveisCtr;
+        Filtro filtro;
 
         public FrmConsultaImoveis()
         {
@@ -23,13 +24,17 @@ namespace SistemasImobiliaria
             comboBoxTipo.SelectedIndex = 0;
             imoveisCtr = new ImoveisCtr();
             atualizaTela();
+            filtro = new Filtro();
         }
 
         private void atualizaTela()
         {
             if (textBoxDescricao.Text.Length > 0)
             {
-                dataGridView1.DataSource = imoveisCtr.getConsultaImoveis(comboBoxCampo.SelectedIndex, comboBoxTipo.SelectedIndex, textBoxDescricao.Text);
+                filtro.campo = comboBoxCampo.SelectedIndex;
+                filtro.tipo = comboBoxTipo.SelectedIndex;
+                filtro.descricao = textBoxDescricao.Text;
+                dataGridView1.DataSource = imoveisCtr.getConsultaImoveis(filtro);
             }
             else
             {
